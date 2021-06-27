@@ -1,1 +1,12 @@
-export const urlApi: string = `https://api.openweathermap.org/data/2.5/weather?q=cityName&units=metric&lang=pl&appid=d377de9ca27be6063586b7e83a0ff985`;
+export const adsArray = [
+  { 
+    gridAdsBackground: 'grid-ads-background',
+    gridAdsRow: 'grid-ads-row-2',
+    order: 7,
+  },
+  { 
+    gridAdsBackground: 'grid-ads-background',
+    gridAdsColumn: 'grid-ads-column-2',
+    order: 18
+  },
+]

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import {
-  Link,
-  useParams,
-} from "react-router-dom";
 import MainLayoutComponent from '../../layouts/MainLayoutComponent';
-
+import Header from '../../layouts/Header';
+import Footer from '../../layouts/Footer';
 import './style/HomePage.scss';
 
 const HomePage = () => {
  
   return (
-      <>    
-       <MainLayoutComponent />
-      </>
+      <main>  
+        <Header/>
+        <div className="content">
+          <MainLayoutComponent/>
+        </div>
+        <Footer/>
+      </main>
   );
 };
 

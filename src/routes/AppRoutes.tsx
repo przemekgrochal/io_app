@@ -21,7 +21,7 @@ export default function AppRoutes() {
                     
                     <Route
                         exact
-                        path="/city/:cityName"
+                        path="/news/:newsId"
                         component={(props: any) => (
                             <>
                                 <NewsPage/>

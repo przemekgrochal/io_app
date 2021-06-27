@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {
-  Link,
-  useParams,
-} from "react-router-dom";
-import { fetchData } from '../utilities/fetchData';
+import { fetchData, FetchDataType } from '../utilities/fetchData';
 import TileComponent from '../components/TileComponent';
 import './style/MainLayoutComponent.scss';
 
 const MainLayoutComponent = () => {
 
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<FetchDataType | null>(null);
 
   useEffect(() => {
 
@@ -21,7 +17,7 @@ const MainLayoutComponent = () => {
   },[]);
 
   return (
-      <>    
+      <>   
         <div className="container">
           <TileComponent data={data}/>
         </div>

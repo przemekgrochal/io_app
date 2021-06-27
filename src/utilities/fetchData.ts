@@ -1,47 +1,16 @@
 export type FetchDataType = {
-  code: number,
-  message: string,
-  coord: {
-      lon: number,
-      lat: number
-  },
-  weather: [
-      {
-          id: number,
-          main: string,
-          description: string,
-          icon: string
-      }
-  ],
-  base: string,
-  main: {
-      temp: number,
-      feels_like: number,
-      temp_min: number,
-      temp_max: number,
-      pressure: number,
-      humidity: number
-  },
-  visibility: number,
-  wind: {
-      speed: number,
-      deg: number
-  },
-  clouds: {
-      all: number
-  },
-  dt: number,
-  sys: {
-      type: number,
-      id: number,
-      country: string,
-      sunrise: number,
-      sunset: number
-  },
-  timezone: number,
-  id: number,
-  name: string,
-  cod: number
+  category: string
+  date: Date
+  dateTime: string
+  img: string
+  link: string
+  objectId: number
+  service: string
+  summary: string
+  title: string
+  gridAdsBackground: string,
+  gridAdsRow: string,
+  order: number,
 }
 
 export const fetchData = async(urlApi: string, methods: string, bodyData: any) => {

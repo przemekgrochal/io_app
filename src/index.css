@@ -16,3 +16,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   text-decoration: none;
   outline: 0;
 }
+
+body {
+  font: normal 18px 'Open Sans', sans-serif;
+  background: #fafafa;
+  color: #333;
+}

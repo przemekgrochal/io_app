@@ -1,37 +1,21 @@
 
-import { ListItemAvatar } from "@material-ui/core";
-import React, { useEffect } from "react";
+import { FetchDataType } from '../utilities/fetchData';
+import { adsArray } from '../const/const';
 import './style/TileComponent.scss';
 
-// type Props = {
-//   weather: FetchDataType | null
-// }
+type Props = {
+  data: FetchDataType | null
+}
 
-const adsArray = [
-  { 
-    gridAdsBackground: 'grid-ads-background',
-    gridAdsRow: 'grid-ads-row-2',
-    order: 6,
-  },
-  { 
-    gridAdsBackground: 'grid-ads-background',
-    gridAdsColumn: 'grid-ads-column-2',
-    order: 17
-  },
-]
-
-const TileComponent: React.FC<any> = ({data}) => {
-
+const TileComponent: React.FC<Props> = ({data}) => {
 
   const renderTile = (dataToAds:any) => {
     const concatAdsToNews = [...dataToAds, ...adsArray];
     concatAdsToNews[0].gridBigNewsTop = 'grid-big-news-top';
 
-    // console.log(concatAdsToNews)   
-
     return (
       concatAdsToNews?.map((item:any, index:number) => {
-        console.log(item);
+
         return(
           <div className={`tile-container
             ${item.gridBigNewsTop ? item.gridBigNewsTop : ''}
@@ -44,6 +28,7 @@ const TileComponent: React.FC<any> = ({data}) => {
               backgroundImage: `url(${item.img})`,
               order: item.order ? item.order : index,
             }}
+            onClick={()=> window.location.href = item.link}
           >
     
             <div className="tile" 
@@ -52,8 +37,8 @@ const TileComponent: React.FC<any> = ({data}) => {
             }}></div>
 
             <div className="tile-title">
-                {item.title}
-              </div>
+              {item.title}
+            </div>
 
           </div>
         );
